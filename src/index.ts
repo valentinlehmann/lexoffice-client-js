@@ -12,10 +12,11 @@ import { PaymentConditionClient } from './paymentCondition/paymentCondition.clie
 import { ProfileClient } from './profile/profile.client';
 import { QuotationClient } from './quotation/quotation.client';
 import { RecurringTemplateClient } from './recurringTemplate/recurringTemplate.client';
-import { VoucherlistClient } from './voucherList/voucherList.client';
+import { VoucherlistClient } from './voucherlist/voucherlist.client';
 import { VoucherClient } from './voucher/voucher.client';
 import { FileClient } from './file/file.client';
 import { PostingCategoryClient } from './postingCategory/postingCategory.client';
+import { ArticlesClient } from './article/article.client';
 
 class Client extends BaseClient {}
 interface Client
@@ -34,7 +35,8 @@ interface Client
     VoucherlistClient,
     VoucherClient,
     FileClient,
-    PostingCategoryClient {}
+    PostingCategoryClient,
+    ArticlesClient {}
 applyMixins(Client, [
   InvoiceClient,
   ContactsClient,
@@ -73,3 +75,4 @@ export * from './voucherList/voucherList.type';
 export * from './voucher/voucher.type';
 export * from './file/file.type';
 export * from './postingCategory/postingCategory.type';
+export * from './article/article.type';
